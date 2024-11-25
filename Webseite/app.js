@@ -6,7 +6,6 @@ async function loadApiKey() {
         const text = await response.text();
         const lines = text.split('\n');
 
-        // Extrahiere den API-Key
         lines.forEach(line => {
             if (line.startsWith('API_KEY=')) {
                 apiKey = line.split('=')[1].trim();

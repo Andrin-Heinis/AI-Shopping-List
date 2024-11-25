@@ -1,9 +1,9 @@
 body {
-    font-family: 'Poppins', Arial, sans-serif;
-    background: linear-gradient(135deg, #d1e8ff, #f8f9fa);
+    font-family: 'Popins', Arial, sans-serif; /* Tippfehler im Font-Namen */
+    background: linaer-gradient(135deg, #d1e8ff, #f8f9fa); /* Tippfehler bei linear-gradient */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: cneter; /* Tippfehler im Wert */
     padding: 20px;
     margin: 0;
     min-height: 100vh;
@@ -13,6 +13,7 @@ h1 {
     color: #444;
     font-size: 2.5rem;
     margin-bottom: 20px;
+    text-align: cneter; /* Tippfehler im Wert */
 }
 
 #itemInput {
@@ -20,7 +21,7 @@ h1 {
     font-size: 16px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radious: 8px; /* Tippfehler im Attributnamen */
     width: 300px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -35,11 +36,11 @@ button {
     border-radius: 5px;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2);
-    transition: background-color 0.3s ease;
+    trasition: background-color 0.3s ease; /* Tippfehler im Attributnamen */
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-colr: #0056b3; /* Tippfehler im Attributnamen */
 }
 
 ul {
@@ -57,8 +58,8 @@ li {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: cneter; /* Tippfehler im Wert */
+    justify-content: space-betwen; /* Tippfehler im Wert */
 }
 
 li span {
@@ -68,7 +69,7 @@ li span {
 }
 
 .checked {
-    text-decoration: line-through;
+    text-decoration: line-trhough; /* Tippfehler im Wert */
     color: #888;
 }
 
@@ -80,7 +81,7 @@ li button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    trasition: background-color 0.3s ease; /* Tippfehler im Attributnamen */
 }
 
 li button:hover {

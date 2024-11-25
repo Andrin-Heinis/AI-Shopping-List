@@ -2,110 +2,173 @@
 
 Falls du nicht weiterkommst, hier sind Hinweise und Lösungen:
 
-1. **Hintergrundfarbe reparieren**:
-   - In der CSS-Datei gibt es einen Fehler bei der Hintergrundfarbe. Das Wort `wrongcolor` ist kein gültiger Farbwert. Ändere es z.B. zu `lightgray`.
+## HTML-Lösungen
 
-   Die richtige Lösung:
-   - `background-color: lightgray;`
+### 1. **Falsche CSS-Datei verlinkt**:
+   - Die CSS-Datei ist falsch benannt als `falscheDatei.css`. Ändere sie auf `styles.css`.
 
-2. **Schriftart korrigieren**:
-   - Der Wert `sansserif` ist nicht korrekt. Es sollte `sans-serif` heissen.
+   **Die richtige Lösung**:
+   ```html
+   <link rel="stylesheet" href="/Webseite/styles.css">
+   ```
 
-   Die richtige Lösung:
-   - `font-family: sans-serif;`
+### 2. **Fehlender `placeholder`-Text korrigieren**:
+   - Der `placeholder`-Text enthält einen Tippfehler. Ändere `hznzufügen` zu `hinzufügen`.
 
-3. **Überschrift richtig ausrichten**:
-   - Der Wert `lefttt` ist nicht korrekt. Ersetze ihn durch `left`, um die Überschrift korrekt links auszurichten.
+   **Die richtige Lösung**:
+   ```html
+   <input type="text" id="itemInput" placeholder="Artikel hinzufügen">
+   ```
 
-   Die richtige Lösung:
-   - `text-align: left;`
+### 3. **Fehlendes schließendes Tag**:
+   - Das `<button>`-Element ist nicht geschlossen.
 
-4. **Schriftgrösse des Absatzes anpassen**:
-   - Es fehlt der Doppelpunkt bei `fontsize` und die Einheit für die Schriftgrösse. Ändere es wie folgt:
+   **Die richtige Lösung**:
+   ```html
+   <button onclick="addItem()">Hinzufügen</button>
+   ```
 
-   Die richtige Lösung:
-   - `font-size: 16px;`
+### 4. **Falscher Listentyp**:
+   - Der Listentyp `<ol>` ist falsch. Ändere ihn zu `<ul>`.
 
-5. **Fusszeile zentrieren**:
-   - Der Wert `centered` ist kein gültiger Wert. Ändere ihn zu `center`, um die Fusszeile zu zentrieren.
+   **Die richtige Lösung**:
+   ```html
+   <ul id="shoppingList"></ul>
+   ```
 
-   Die richtige Lösung:
-   - `text-align: center;`
+### 5. **Fehlender JavaScript-Dateiname**:
+   - Die JavaScript-Datei ist falsch benannt als `falschesScript.js`. Ändere sie auf `app.js`.
 
-6. **Fehlende Einheiten hinzufügen**:
-   - In der CSS-Datei fehlen Einheiten wie `px` bei den Abständen oder Schriftgrössen. Stelle sicher, dass diese korrekt hinzugefügt sind.
+   **Die richtige Lösung**:
+   ```html
+   <script src="/Webseite/app.js"></script>
+   ```
 
-   Die richtige Lösung:
-   - `margin-left: 20px;`
+### 6. **Leeres `div` für Vorschläge**:
+   - Das `div` ist leer. Füge einen Platzhaltertext hinzu.
 
-<br>
-<br>
-<br>
+   **Die richtige Lösung**:
+   ```html
+   <div id="suggestions">Hier erscheinen Vorschläge</div>
+   ```
 
-# Tutorial (Erweiterte Lösungen)
+### 7. **Fehlende `id` im Eingabefeld**:
+   - Füge die fehlende `id="itemInput"` hinzu.
 
-## 1. Falsche Selektoren reparieren:
-Der Selektor `addbutton` ist nicht korrekt. Ersetze ihn durch den richtigen Selektor für die ID.
+   **Die richtige Lösung**:
+   ```html
+   <input type="text" id="itemInput" placeholder="Artikel hinzufügen">
+   ```
 
-**Die richtige Lösung:**
+### 8. **Tippfehler im `onclick`-Attribut**:
+   - Das Attribut `onlick` ist falsch geschrieben. Korrigiere es zu `onclick`.
 
-```javascript
-document.querySelector('#add-button');
-```
+   **Die richtige Lösung**:
+   ```html
+   <button onclick="addItem()">Hinzufügen</button>
+   ```
 
-## 2. Leere Eingaben vermeiden:
-Der Code lässt leere Eingaben zu. Füge eine Überprüfung hinzu, um sicherzustellen, dass die Eingabe nicht nur Leerzeichen enthält.
+### 9. **Fehlerhafter Sprachcode**:
+   - Der Sprachcode `de` ist korrekt. Hier ist ein Beispiel, wie es aussehen sollte:
 
-Die richtige Lösung:
+   **Die richtige Lösung**:
+   ```html
+   <html lang="de">
+   ```
 
-```javascript 
-if (inputField.value.trim() === '') {
-    alert('Leere Eingaben sind nicht erlaubt!');
-    return;
-}
-```
+### 10. **Titel verbessern**:
+   - Ändere den Titel zu etwas aussagekräftigerem, z. B. "Meine Einkaufsliste".
 
-## 3. Artikel zur Liste hinzufügen:
-Die Funktion zum Hinzufügen eines Artikels funktioniert nicht korrekt. Stelle sicher, dass der Artikel in die Liste eingefügt wird.
+   **Die richtige Lösung**:
+   ```html
+   <title>Meine Einkaufsliste</title>
+   ```
 
-Die richtige Lösung:
+---
 
-```javascript
-const newItem = document.createElement('li');
-newItem.textContent = inputField.value;
-itemList.appendChild(newItem);
-```
+## CSS-Lösungen
 
-## 4. Artikel löschen:
-Die Löschfunktion funktioniert nicht korrekt, weil die Methode falsch aufgerufen wird.
+### 11. **Hintergrund reparieren**:
+   - Der Fehler liegt bei `linaer-gradient`. Ändere ihn zu `linear-gradient`.
 
-Die richtige Lösung:
+   **Die richtige Lösung**:
+   ```css
+   background: linear-gradient(135deg, #d1e8ff, #f8f9fa);
+   ```
 
-```javascript
-deleteButton.addEventListener('click', function() {
-    this.parentElement.remove();
-});
-```
+### 12. **Schriftart korrigieren**:
+   - Die Schriftart `Popins` ist falsch. Ändere sie zu `Poppins`.
 
-## 5. Eltern-Element korrekt referenzieren:
-Die Löschfunktion verwendet die falsche Methode, um auf das übergeordnete Element zuzugreifen.
+   **Die richtige Lösung**:
+   ```css
+   font-family: 'Poppins', Arial, sans-serif;
+   ```
 
-Die richtige Lösung:
+### 13. **Ausrichtung der Elemente**:
+   - Der Wert `cneter` ist falsch. Ändere ihn zu `center`.
 
-```javascript
-button.parentElement.remove();
-```
+   **Die richtige Lösung**:
+   ```css
+   text-align: center;
+   ```
 
+### 14. **Überschrift zentrieren**:
+   - Der Fehler liegt bei `text-align: cneter`. Korrigiere ihn.
 
-## 6. Zusätzliche Buttons reparieren:
-Füge den vorhandenen Löschen-Buttons eine Löschfunktion hinzu.
+   **Die richtige Lösung**:
+   ```css
+   text-align: center;
+   ```
 
-Die richtige Lösung:
+### 15. **Schrift-Durchstreichung reparieren**:
+   - Der Wert `line-trhough` ist falsch. Ändere ihn zu `line-through`.
 
-```javascript
-deleteButtons.forEach(button => {
-    button.addEventListener('click', function() {
-        this.parentElement.remove();
-    });
-});
-```
+   **Die richtige Lösung**:
+   ```css
+   text-decoration: line-through;
+   ```
+
+### 16. **Fehlende Einheiten ergänzen**:
+   - Der Fehler liegt bei fehlenden Einheiten, z. B. `8px` statt `8`.
+
+   **Die richtige Lösung**:
+   ```css
+   border-radius: 8px;
+   ```
+
+### 17. **Farben anpassen**:
+   - Ändere die Standardfarbe `#007bff` zu `#0066cc`.
+
+   **Die richtige Lösung**:
+   ```css
+   background-color: #0066cc;
+   ```
+
+### 18. **Liste hervorheben**:
+   - Füge einen Hover-Effekt für die Liste hinzu.
+
+   **Die richtige Lösung**:
+   ```css
+   li:hover {
+       background-color: #f0f0f0;
+   }
+   ```
+
+### 19. **Barrierefreiheit verbessern**:
+   - Ändere den Kontrast von `#888` zu `#555` für bessere Lesbarkeit.
+
+   **Die richtige Lösung**:
+   ```css
+   color: #555;
+   ```
+
+### 20. **Animation für Button**:
+   - Füge eine Animation hinzu, wenn der Button gedrückt wird.
+
+   **Die richtige Lösung**:
+   ```css
+   button:active {
+       transform: scale(0.95);
+       background-color: #004080;
+   }
+   ```
