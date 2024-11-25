@@ -20,7 +20,7 @@ Falls du nicht weiterkommst, hier sind Hinweise und Lösungen:
    <input type="text" id="itemInput" placeholder="Artikel hinzufügen">
    ```
 
-### 3. **Fehlendes schließendes Tag**:
+### 3. **Fehlendes schliessendes Tag**:
    - Das `<button>`-Element ist nicht geschlossen.
 
    **Die richtige Lösung**:
