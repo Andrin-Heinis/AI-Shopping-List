@@ -16,6 +16,7 @@ Der [Webseite](/Webseite/) Ordner. Da sind alle Files für die Webseite darin. <
 &nbsp;&nbsp;&nbsp; Das [index.html](/Webseite/index.html) ist das HTML File für die Webseite, da kannst du Text änderungen vornehmen. <br>
 &nbsp;&nbsp;&nbsp; Das [script.js](/Webseite/script.js) ist das Script File für die Webseite, das brauchst du in den Erweiterten Aufgaben dann. <br>
 &nbsp;&nbsp;&nbsp; Das [style.css](/Webseite/styles.css) ist das Style File vom Index, darin kannst du gestaltliche änderunden vornehmen. <br>
+Das [.gitignore](/.gitignore.md) ist ein File von Git, das kannst du ebenfalls ignonieren. <br>
 Das [README](/README.md) ist das ReadMe File, da befindest du dich gerade darin. <br>
 
 Bevor du starten kannst, musst du noch kurz zu **Andrin** (der mit Brille) gehen. Er gibt dir ein AI-Key. Der brauchst du für das Projekt. Er wird dir zeigen wie man den Key einfügt.
